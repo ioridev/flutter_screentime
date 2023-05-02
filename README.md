@@ -3,6 +3,12 @@
 Using the Screen Time API for iOS in Flutter.
 
 
+
+https://user-images.githubusercontent.com/41247249/235582095-66d23f3e-91d1-4a42-88d0-4c3cae886c39.mov
+
+
+
+
 ## Features
 - Set restrictions by selecting specific apps or websites.
 - Monitor selected activities.
