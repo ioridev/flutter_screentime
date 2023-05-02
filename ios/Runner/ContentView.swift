@@ -6,15 +6,16 @@ struct ContentView: View {
     @State private var isEncouragedPresented = false
 
     @EnvironmentObject var model: MyModel
+    @Environment(\.presentationMode) var presentationMode
 
     @ViewBuilder
     func contentView() -> some View {
         switch globalMethodCall {
         case "selectAppsToDiscourage":
-            FamilyActivityPicker(selection: $model.selectionToDiscourage).onChange(of: model.selectionToDiscourage) { _ in
-                model.setShieldRestrictions()
-            }
-
+            FamilyActivityPicker(selection: $model.selectionToDiscourage)
+                .onChange(of: model.selectionToDiscourage) { _ in
+                    model.setShieldRestrictions()
+                }
         case "selectAppsToEncourage":
             FamilyActivityPicker(selection: $model.selectionToEncourage)
                 .onChange(of: model.selectionToEncourage) { _ in
@@ -28,8 +29,27 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack {
-            contentView()
+        NavigationView {
+            VStack {
+                contentView()
+            }
+            .navigationBarTitle("Select Apps", displayMode: .inline)
+            .navigationBarItems(
+                leading: Button("Cancel") {
+                    presentationMode.wrappedValue.dismiss()
+                },
+                trailing: Button("Done") {
+                    switch globalMethodCall {
+                    case "selectAppsToDiscourage":
+                        model.setShieldRestrictions()
+                    case "selectAppsToEncourage":
+                        MySchedule.setSchedule()
+                    default:
+                        break
+                    }
+                    presentationMode.wrappedValue.dismiss()
+                }
+            )
         }
     }
 }
