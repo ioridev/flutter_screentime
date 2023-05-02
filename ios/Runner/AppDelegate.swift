@@ -5,6 +5,7 @@ import ManagedSettings
 import SwiftUI
 import UIKit
 
+var globalMethodCall = ""
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
     override func application(
@@ -29,7 +30,6 @@ import UIKit
                         print("try requestAuthorization")
                         try await AuthorizationCenter.shared.requestAuthorization(for: FamilyControlsMember.individual)
                         print("requestAuthorization success")
-
                         switch AuthorizationCenter.shared.authorizationStatus {
                         case .notDetermined:
                             print("not determined")
@@ -49,13 +49,23 @@ import UIKit
             }
             switch call.method {
             case "selectAppsToDiscourage":
-
+                globalMethodCall = "selectAppsToDiscourage"
                 let vc = UIHostingController(rootView: ContentView()
                     .environmentObject(model)
                     .environmentObject(store))
-                controller.present(vc, animated: true, completion: nil)
+
+                controller.present(vc, animated: false, completion: nil)
 
                 print("selectAppsToDiscourage")
+                result(nil)
+            case "selectAppsToEncourage":
+                globalMethodCall = "selectAppsToEncourage"
+                let vc = UIHostingController(rootView: ContentView()
+                    .environmentObject(model)
+                    .environmentObject(store))
+                controller.present(vc, animated: false, completion: nil)
+
+                print("selectAppsToEncourage")
                 result(nil)
             default:
                 print("no method")

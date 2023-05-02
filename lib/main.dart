@@ -33,12 +33,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final int _counter = 0;
-
-  void _incrementCounter() {
-    methodChannel.invokeMethod('selectAppsToDiscourage');
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,20 +43,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            TextButton(
+              onPressed: () {
+                methodChannel.invokeMethod('selectAppsToDiscourage');
+              },
+              child: const Text('selectAppsToDiscourage'),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            TextButton(
+              onPressed: () {
+                methodChannel.invokeMethod('selectAppsToEncourage');
+              },
+              child: const Text('selectAppsToEncourage'),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
