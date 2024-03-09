@@ -48,24 +48,24 @@ var globalMethodCall = ""
                 }
             }
             switch call.method {
-            case "selectAppsToDiscourage":
-                globalMethodCall = "selectAppsToDiscourage"
+            case "blockApp":
+                globalMethodCall = "blockApp"
                 let vc = UIHostingController(rootView: ContentView()
                     .environmentObject(model)
                     .environmentObject(store))
 
                 controller.present(vc, animated: false, completion: nil)
 
-                print("selectAppsToDiscourage")
+                print("blockApp")
                 result(nil)
-            case "selectAppsToEncourage":
-                globalMethodCall = "selectAppsToEncourage"
+            case "unblockApp":
+                globalMethodCall = "unblockApp"
                 let vc = UIHostingController(rootView: ContentView()
                     .environmentObject(model)
                     .environmentObject(store))
                 controller.present(vc, animated: false, completion: nil)
 
-                print("selectAppsToEncourage")
+                print("unblockApp")
                 result(nil)
             default:
                 print("no method")
