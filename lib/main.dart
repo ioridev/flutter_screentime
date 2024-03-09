@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -44,16 +46,27 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextButton(
-              onPressed: () {
-                methodChannel.invokeMethod('selectAppsToDiscourage');
+              onPressed: () async {
+                var result = 'approved';
+                if (Platform.isAndroid) {
+                  result = await methodChannel.invokeMethod('checkPermission')
+                      as String;
+                }
+                debugPrint('[DEBUG]result: $result');
+                if (result == 'approved') {
+                  await methodChannel.invokeMethod('blockApp');
+                } else {
+                  debugPrint('[DEBUG]Permission not granted');
+                  await methodChannel.invokeMethod('requestAuthorization');
+                }
               },
-              child: const Text('selectAppsToDiscourage'),
+              child: const Text('blockApp'),
             ),
             TextButton(
               onPressed: () {
-                methodChannel.invokeMethod('selectAppsToEncourage');
+                methodChannel.invokeMethod('unblockApp');
               },
-              child: const Text('selectAppsToEncourage'),
+              child: const Text('unblockApp'),
             ),
           ],
         ),
