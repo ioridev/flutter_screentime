@@ -14,7 +14,8 @@ https://github.com/ioridev/flutter_screentime/assets/41247249/144c7f65-6ea0-4ab7
 
 
 
-
+Apps created from this template.  
+[https://apps.apple.com/us/app/focusnova/id6563146257](https://apps.apple.com/us/app/focusnova/id6563146257)
 
 
 ## Features
