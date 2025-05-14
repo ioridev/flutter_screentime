@@ -1,5 +1,5 @@
 # flutter_screentime
-
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ioridev/flutter_screentime)  
 Using the Screen Time API for iOS in Flutter.
 
 
