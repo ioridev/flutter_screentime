@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Added demo video links back to the English and Japanese README files.
+
 ## 0.1.0
 
 - Reworked the repository into a Flutter plugin package.
