@@ -1,6 +1,6 @@
 name: flutter_screentime
 description: Flutter plugin for Screen Time style blocking with host-configured iOS extensions and configurable Android overlays.
-version: 0.1.4
+version: 0.1.5
 homepage: https://github.com/ioridev/flutter_screentime
 repository: https://github.com/ioridev/flutter_screentime
 issue_tracker: https://github.com/ioridev/flutter_screentime/issues

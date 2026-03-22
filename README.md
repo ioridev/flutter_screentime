@@ -13,11 +13,11 @@ The package now splits concerns this way:
 
 ### iOS
 
-![iOS demo](doc/ios-demo.gif)
+![iOS demo](https://raw.githubusercontent.com/ioridev/flutter_screentime/main/doc/ios-demo.gif)
 
 ### Android
 
-![Android demo](doc/android-demo.gif)
+![Android demo](https://raw.githubusercontent.com/ioridev/flutter_screentime/main/doc/android-demo.gif)
 
 ## What the plugin does
 

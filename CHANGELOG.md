@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5
+
+- Switched README demo embeds to absolute `raw.githubusercontent.com` URLs so pub.dev can render them reliably.
+
 ## 0.1.4
 
 - Moved demo GIFs under `doc/` so pub.dev can render the embedded previews correctly.
