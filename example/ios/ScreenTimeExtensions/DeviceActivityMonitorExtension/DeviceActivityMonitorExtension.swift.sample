@@ -1,0 +1,22 @@
+import DeviceActivity
+import ManagedSettings
+
+final class DeviceActivityMonitorExtension: DeviceActivityMonitor {
+  private let store = ManagedSettingsStore()
+
+  override func intervalDidStart(for activity: DeviceActivityName) {
+    let defaults = UserDefaults(suiteName: "group.your.app")
+    let isBlockingEnabled = defaults?.bool(forKey: "flutter_screentime.blockingEnabled") ?? false
+    guard isBlockingEnabled else {
+      return
+    }
+
+    // Load the persisted FamilyActivitySelection from:
+    // "flutter_screentime.blockedSelection"
+    // and re-apply shielding if your app schedules blocking windows.
+  }
+
+  override func intervalDidEnd(for activity: DeviceActivityName) {
+    store.clearAllSettings()
+  }
+}
