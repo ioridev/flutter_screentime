@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- Moved demo GIFs under `doc/` so pub.dev can render the embedded previews correctly.
+
 ## 0.1.3
 
 - Added embedded demo GIFs for iOS and Android so previews render on pub.dev.

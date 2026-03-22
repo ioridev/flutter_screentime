@@ -13,11 +13,11 @@ Screen Time 風のブロック機能を提供する Flutter plugin です。
 
 ### iOS
 
-![iOS demo](assets/demo/ios-demo.gif)
+![iOS demo](doc/ios-demo.gif)
 
 ### Android
 
-![Android demo](assets/demo/android-demo.gif)
+![Android demo](doc/android-demo.gif)
 
 ## plugin が提供するもの
 

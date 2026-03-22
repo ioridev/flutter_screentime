@@ -13,11 +13,11 @@ The package now splits concerns this way:
 
 ### iOS
 
-![iOS demo](assets/demo/ios-demo.gif)
+![iOS demo](doc/ios-demo.gif)
 
 ### Android
 
-![Android demo](assets/demo/android-demo.gif)
+![Android demo](doc/android-demo.gif)
 
 ## What the plugin does
 
