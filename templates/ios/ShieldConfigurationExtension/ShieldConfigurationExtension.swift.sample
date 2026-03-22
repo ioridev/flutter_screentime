@@ -1,0 +1,55 @@
+import ManagedSettings
+import ManagedSettingsUI
+import UIKit
+
+final class ShieldConfigurationExtension: ShieldConfigurationDataSource {
+  private let suiteName = "group.your.app"
+
+  override func configuration(
+    shielding application: Application
+  ) -> ShieldConfiguration {
+    let defaults = UserDefaults(suiteName: suiteName)
+    let config = defaults?.dictionary(forKey: "flutter_screentime.blockScreenConfig")
+
+    let title = config?["title"] as? String ?? "Blocked"
+    let message = config?["message"] as? String ?? "Come back later."
+    let backgroundHex = config?["backgroundColorHex"] as? String ?? "#111827"
+    let textHex = config?["textColorHex"] as? String ?? "#FFFFFF"
+
+    return ShieldConfiguration(
+      backgroundBlurStyle: .systemUltraThinMaterialDark,
+      backgroundColor: UIColor(hex: backgroundHex),
+      title: ShieldConfiguration.Label(
+        text: title,
+        color: UIColor(hex: textHex)
+      ),
+      subtitle: ShieldConfiguration.Label(
+        text: message,
+        color: UIColor(hex: textHex)
+      ),
+      primaryButtonLabel: ShieldConfiguration.Label(
+        text: config?["primaryButtonLabel"] as? String ?? "Open app",
+        color: UIColor(hex: textHex)
+      ),
+      primaryButtonBackgroundColor: UIColor(hex: textHex)
+    )
+  }
+}
+
+private extension UIColor {
+  convenience init(hex: String) {
+    var sanitized = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+    if sanitized.count == 6 {
+      sanitized = "FF" + sanitized
+    }
+
+    var value: UInt64 = 0
+    Scanner(string: sanitized).scanHexInt64(&value)
+    self.init(
+      red: CGFloat((value >> 16) & 0xFF) / 255.0,
+      green: CGFloat((value >> 8) & 0xFF) / 255.0,
+      blue: CGFloat(value & 0xFF) / 255.0,
+      alpha: CGFloat((value >> 24) & 0xFF) / 255.0
+    )
+  }
+}

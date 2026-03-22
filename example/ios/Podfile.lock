@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_screentime (0.1.0):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_screentime (from `.symlinks/plugins/flutter_screentime/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_screentime:
+    :path: ".symlinks/plugins/flutter_screentime/ios"
+
+SPEC CHECKSUMS:
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  flutter_screentime: 75357ff97927a6442a54d9162b5ecf940d3e6116
+
+PODFILE CHECKSUM: bd29822c3d5baf6b44b726f00ea3293a19339ef2
+
+COCOAPODS: 1.16.2
