@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Switched the demo section back to bare video URLs so GitHub can render them like the original README.
+
 ## 0.1.1
 
 - Added demo video links back to the English and Japanese README files.

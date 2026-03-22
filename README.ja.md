@@ -11,8 +11,13 @@ Screen Time 風のブロック機能を提供する Flutter plugin です。
 
 ## デモ
 
-- [iOS デモ動画 (.mov)](https://user-images.githubusercontent.com/41247249/235582095-66d23f3e-91d1-4a42-88d0-4c3cae886c39.mov)
-- [Android デモ動画](https://github.com/ioridev/flutter_screentime/assets/41247249/144c7f65-6ea0-4ab7-82fb-4c5444f18cf3)
+iOS:
+
+https://user-images.githubusercontent.com/41247249/235582095-66d23f3e-91d1-4a42-88d0-4c3cae886c39.mov
+
+Android:
+
+https://github.com/ioridev/flutter_screentime/assets/41247249/144c7f65-6ea0-4ab7-82fb-4c5444f18cf3
 
 ## plugin が提供するもの
 
