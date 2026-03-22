@@ -11,6 +11,8 @@
    - `Shield Configuration Extension` for custom blocked-screen content.
    - `Device Activity Monitor Extension` if you want scheduled or threshold-based monitoring.
 
+If you see `Connection error from Optional("com.apple.FamilyControlsAgent"): Couldn’t communicate with a helper application.`, check the app target first. Apple Developer Forums reports this error being resolved by adding the `Family Controls` capability to the app target, which adds the entitlement required for authorization and picker access.
+
 ## Shared keys
 
 The plugin writes these values into both `UserDefaults.standard` and the configured app-group defaults:
