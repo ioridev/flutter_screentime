@@ -26,5 +26,5 @@ The plugin writes these values into both `UserDefaults.standard` and the configu
 
 Sample extension implementations live here:
 
-- `/Users/iori/src/flutter_screentime/templates/ios/ShieldConfigurationExtension/ShieldConfigurationExtension.swift.sample`
-- `/Users/iori/src/flutter_screentime/templates/ios/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.swift.sample`
+- `templates/ios/ShieldConfigurationExtension/ShieldConfigurationExtension.swift.sample`
+- `templates/ios/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.swift.sample`

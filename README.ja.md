@@ -48,12 +48,12 @@ await screenTime.startBlocking();
 - 共有 `App Group`
 - `Family Controls` capability
 
-セットアップ詳細: [docs/ios_extensions.md](/Users/iori/src/flutter_screentime/docs/ios_extensions.md)
+セットアップ詳細: [doc/ios_extensions.md](doc/ios_extensions.md)
 
 テンプレート:
 
-- [ShieldConfigurationExtension.swift.sample](/Users/iori/src/flutter_screentime/templates/ios/ShieldConfigurationExtension/ShieldConfigurationExtension.swift.sample)
-- [DeviceActivityMonitorExtension.swift.sample](/Users/iori/src/flutter_screentime/templates/ios/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.swift.sample)
+- [ShieldConfigurationExtension.swift.sample](templates/ios/ShieldConfigurationExtension/ShieldConfigurationExtension.swift.sample)
+- [DeviceActivityMonitorExtension.swift.sample](templates/ios/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.swift.sample)
 
 ## Android について
 
