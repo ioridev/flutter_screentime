@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Added embedded demo GIFs for iOS and Android so previews render on pub.dev.
+
 ## 0.1.2
 
 - Switched the demo section back to bare video URLs so GitHub can render them like the original README.
