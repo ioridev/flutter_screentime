@@ -1,5 +1,7 @@
 # flutter_screentime
 
+[日本語版 README](README.ja.md)
+
 Flutter plugin for Screen Time style blocking.
 
 The package now splits concerns this way:
